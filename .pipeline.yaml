@@ -5,16 +5,16 @@ stages:
   - sourceCodeConfig:
       branch: master
       branchCondition: only
-      url: https://github.com/gitlawr/goexample.git
+      url: https://github.com/zionwu/goexample.git
 - name: build
   steps:
   - runScriptConfig:
       image: golang:latest
       isShell: true
       shellScript: |-
-        mkdir -p /go/src/github.com/gitlawr
-        ln -s `pwd` /go/src/github.com/gitlawr/goexample
-        cd /go/src/github.com/gitlawr/goexample
+        mkdir -p /go/src/github.com/zionwu
+        ln -s `pwd` /go/src/github.com/zionwu/goexample
+        cd /go/src/github.com/zionwu/goexample
         go test
 - name: publish
   steps:
