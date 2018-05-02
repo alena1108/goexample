@@ -21,4 +21,4 @@ stages:
   - publishImageConfig:
       buildContext: .
       dockerfilePath: ./Dockerfile
-      tag: lawr/pipeline:dev_${CICD_GIT_COMMIT}
+      tag: docker-local/goexample:dev_${CICD_GIT_COMMIT}
